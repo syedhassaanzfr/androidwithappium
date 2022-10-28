@@ -10,8 +10,6 @@ public class configReader {
     private Properties properties;
 
     public configReader() {
-
-        // BufferedReader is a Java class that reads text from the input stream. It buffers the characters so that it can get the efficient reading of characters, arrays, etc.
         BufferedReader reader;
         String propertyFilePath = "configuration//Config.properties";
         try {
@@ -52,16 +50,4 @@ public class configReader {
         if (automationName != null) return automationName;
         else throw new RuntimeException("automationName not specified in the Configuration.properties file.");
     }
-
-//    public String getApkPath() {
-//        String apkPath = properties.getProperty("apkPath");
-//        if (apkPath != null) return apkPath;
-//        else throw new RuntimeException("apkPath not specified in the Configuration.properties file.");
-//    }
-//
-//    public String appiumServerEndpointURL() {
-//        String appiumServerEndpointURL = properties.getProperty("appiumServerEndpointURL");
-//        if (appiumServerEndpointURL != null) return appiumServerEndpointURL;
-//        else throw new RuntimeException("appiumServerEndpointURL not specified in the Configuration.properties file.");
-//    }
 }

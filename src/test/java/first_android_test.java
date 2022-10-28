@@ -32,14 +32,24 @@ public class first_android_test {
     }
     @Test
     public void clickAppButton(){
+        // create your account button click
         driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.TextView")).click();
+        // enter new email address
+        driver.findElement(By.id("com.booking:id/identity_text_input_edit_text")).sendKeys("hz@gmail.com");
+        //click on continue button
+        driver.findElement(By.id("com.booking:id/identity_landing_social_button_text")).click();
+        //enter new password
+        driver.findElement(By.id("com.booking:id/identity_text_input_edit_text")).sendKeys("123456Test");
+        //click on sign in button
+        driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.TextView")).click();
+
     }
 
-    @AfterTest
-    public void tearDown(){
-        if(null != driver){
-            driver.quit();
-        }
-    }
+//    @AfterTest
+//    public void tearDown(){
+//        if(null != driver){
+//            driver.quit();
+//        }
+//    }
     }
 
